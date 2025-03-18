@@ -6,6 +6,9 @@ import {Status} from "./component/Status"
 import {Heading} from "./component/Heading"
 import {Allan} from "./component/Allan"
 import {Allan2} from "./component/Allan2"
+import Button from "./component/Button"
+import {Input} from "./component/Input"
+import {Container} from "./component/Container"
 
 function App() {
   const userName='allan';
@@ -40,6 +43,11 @@ function App() {
         <Heading>Allan go to another company!!!</Heading>
         <i className="fas fa-shopping-cart"></i>
       </Allan2>
+      <hr />
+      <Button handleClick={(event,id)=>console.log('Button clicked',event,id)}/>
+      <Input value='' handleChange={(e)=>console.log('event:',e)}/>
+      <Container styles={{border:'10px solid red',padding:'1rem',
+        display:'inline-block', width: '200px', height: '100px', backgroundColor: 'lightblue'}} />
     </>
   )
 }
