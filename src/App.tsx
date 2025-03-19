@@ -9,6 +9,7 @@ import {Allan2} from "./component/Allan2"
 import Button from "./component/Button"
 import {Input} from "./component/Input"
 import {Container} from "./component/Container"
+import {User} from "./component/state/User"
 
 function App() {
   const userName='allan';
@@ -48,6 +49,10 @@ function App() {
       <Input value='' handleChange={(e)=>console.log('event:',e)}/>
       <Container styles={{border:'10px solid red',padding:'1rem',
         display:'inline-block', width: '200px', height: '100px', backgroundColor: 'lightblue'}} />
+    
+        <hr />
+        <User></User>
+    
     </>
   )
 }
