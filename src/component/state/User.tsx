@@ -4,7 +4,7 @@ type AuthProps={
     email:string
 }
 export const User:React.FC=()=>{
-    const [user,setUser]=useState<AuthProps|null>(null);
+    const [user,setUser]=useState<AuthProps>({} as AuthProps);
     const handleLogin = (_event:React.MouseEvent<HTMLButtonElement>)=>{
         // setIsLoggedIn(true);
         setUser({
@@ -14,7 +14,7 @@ export const User:React.FC=()=>{
     }
     const handleLogOut = (_event:React.MouseEvent<HTMLButtonElement>)=>{
         // setIsLoggedIn(false);
-        setUser(null)
+        // setUser(null)
     }
     return (
         <div>

@@ -10,7 +10,8 @@ import Button from "./component/Button"
 import {Input} from "./component/Input"
 import {Container} from "./component/Container"
 import {User} from "./component/state/User"
-
+import {ThemeContextProvider} from './component/context/ThemeContext'
+import { Box } from "./component/context/Box"
 function App() {
   const userName='allan';
   const count=50;
@@ -52,7 +53,10 @@ function App() {
     
         <hr />
         <User></User>
-    
+    <hr />
+        <ThemeContextProvider>
+          <Box/>
+        </ThemeContextProvider>
     </>
   )
 }
